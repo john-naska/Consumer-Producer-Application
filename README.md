@@ -37,7 +37,8 @@ docker ps
 IDE
 
 1. Open the project folder in your IDE
-2. Open Runner.java class and execute 
+2. Import libraries if prompted
+3. Open Runner.java class and execute 
 ```
 /.../.../Consumer_Producer/src/main/java/Runner.java
 ```
