@@ -1,0 +1,24 @@
+# yml-Statements for creating Docker file
+
+# Define Docker compose syntax version 3
+version: '3'
+
+# Defining Zookeeper and Kafka services
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper # https://hub.docker.com/r/wurstmeister/zookeeper/
+    container_name: zookeeper
+    ports:
+      - "2181:2181" # "external:internal" CHECK THIS OUT -> https://www.youtube.com/watch?v=6by0pCRQdsI
+  kafka:
+    image: wurstmeister/kafka # https://hub.docker.com/r/wurstmeister/zookeeper/
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost # see https://hub.docker.com/r/wurstmeister/kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181 # kafka service should connect to zookeeper 2181 external port
+
+
+
+
