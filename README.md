@@ -48,8 +48,8 @@ IDE
 
 Source code, console and database
 
-1. Source code: Has been comprehensively commented for further reference
-2. Console output: First, slf4j-logs are printed to the console (in red)
+- Source code: Has been comprehensively commented for further reference
+- Console output: First, slf4j-logs are printed to the console (in red)
 ```
 [main] INFO org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
 	acks = 1
@@ -58,7 +58,7 @@ Source code, console and database
 	buffer.memory = 33554432
 	...
 ```
-3. Console output: Second, event topics are printed by Kafka-Consumer A (in white)
+- Console output: Second, event topics are printed by Kafka-Consumer A (in white)
 
 ```
 Topic: events, Value: Start
@@ -66,7 +66,7 @@ Topic: events, Value: Status 1
 Topic: events, Value: Status 2
 ...
 ```
-4. Console output: Second, event topics are printed by Kafka-Consumer B as a optional feature (in white)
+- Console output: Third, telemetry topics are printed by Kafka-Consumer B as a optional feature (in white)
 ```
 Topic: telemetry, Value: 4923
 Topic: telemetry, Value: 7884
@@ -74,8 +74,8 @@ Topic: telemetry, Value: 5597
 Topic: telemetry, Value: 4219
 ...
 ```
-5. Console output: Hint, logs and consumer outputs might get mixed up a little bit
-6. Database: Records from Consumer B are saved to local SQLite database with minimum data necessary
+- Console output: Hint, logs and consumer outputs might get mixed up a little bit
+- Database: Records from Consumer B are saved to local SQLite database with minimum data necessary
 ```
 topicName | meteredValue |           Time_Stamp
 __________|______________|____________________________
